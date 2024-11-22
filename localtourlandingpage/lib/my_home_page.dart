@@ -139,8 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () =>
-                        _launchURL('https://www.facebook.com/fakepage'),
+                    onPressed: () => _launchURL(
+                        'https://www.facebook.com/profile.php?id=61568729865448'),
                     child: const Text(
                       "FanPage",
                       style: TextStyle(
@@ -414,7 +414,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     // Background image
                     Positioned.fill(
                       child: Image.asset(
-                        'assets/images/hcm3.png', // Replace with your image path
+                        'assets/images/hcm3.jpg', // Replace with your image path
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -452,7 +452,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                     // Add your download action
                                   },
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
                                     shadowColor: Colors.black,
                                     padding: EdgeInsets.zero,
                                     shape: RoundedRectangleBorder(
@@ -471,10 +470,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
+                                      padding: EdgeInsets.only(
+                                          bottom: 5, left: 2, right: 5, top: 5),
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          color: Colors.white),
                                       child: Image.asset(
                                         'assets/images/app_store.png',
                                         width: 200,
@@ -518,7 +519,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       color: Colors.black.withOpacity(0.5),
                       child: Column(children: [
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         const SelectableText(
                           " • Contact • ",
                           style: TextStyle(
@@ -570,8 +573,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Icons.facebook,
                                 color: Colors.blue,
                               ),
-                              onPressed: () =>
-                                  _launchURL('https://www.facebook.com/fakepage'),
+                              onPressed: () => _launchURL(
+                                  'https://www.facebook.com/fakepage'),
                             ),
                             const SizedBox(
                               width: 40,
@@ -582,8 +585,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 FontAwesomeIcons.twitter,
                                 color: Colors.blue,
                               ),
-                              onPressed: () =>
-                                  _launchURL('https://www.twitter.com/fakepage'),
+                              onPressed: () => _launchURL(
+                                  'https://www.twitter.com/fakepage'),
                             ),
                             const SizedBox(
                               width: 40,
@@ -594,8 +597,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 FontAwesomeIcons.youtube,
                                 color: Colors.red,
                               ),
-                              onPressed: () =>
-                                  _launchURL('https://www.youtube.com/fakepage'),
+                              onPressed: () => _launchURL(
+                                  'https://www.youtube.com/fakepage'),
                             ),
                             const SizedBox(
                               width: 40,
@@ -606,12 +609,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 FontAwesomeIcons.instagram,
                                 color: Colors.pinkAccent,
                               ),
-                              onPressed: () =>
-                                  _launchURL('https://www.instagram.com/fakepage'),
+                              onPressed: () => _launchURL(
+                                  'https://www.instagram.com/fakepage'),
                             ),
                           ],
                         ),
-
                       ]),
                     ),
                   ],
@@ -620,7 +622,7 @@ class _MyHomePageState extends State<MyHomePage> {
               // Footer
               Container(
                 width: double.infinity,
-                  color: Color(0xFF0C3344),
+                color: Color(0xFF0C3344),
                 padding: const EdgeInsets.all(10),
                 child: const SelectableText(
                   "Local Tour Company",
