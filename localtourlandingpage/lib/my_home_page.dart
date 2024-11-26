@@ -421,84 +421,65 @@ class _MyHomePageState extends State<MyHomePage> {
                     // Semi-transparent overlay and content
                     Container(
                       color: Colors.black.withOpacity(0.5),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const SelectableText(
-                            " • Download • ",
-                            style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const SelectableText(
+                              " • Download • ",
+                              style: TextStyle(
+                                fontSize: 36,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 20),
-                          const SelectableText(
-                            "100,000,000 \nOver 100 million users on Google Play Store",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 40,
-                              color: Colors.white,
+                            const SizedBox(height: 20),
+                            const SelectableText(
+                              "100,000,000 \nOver 100 million users on Uptodown App Store",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 40,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment
-                                .start, // Align text and buttons evenly
-                            children: [
-                              // Google Play Button
-                              ElevatedButton(
-                                  onPressed: () {
-                                    // Add your download action
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    shadowColor: Colors.black,
-                                    padding: EdgeInsets.zero,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(
-                                          8), // Optional rounded corners
-                                    ),
+                            const SizedBox(height: 30),
+                            ElevatedButton(
+                              onPressed: () {
+                                // Add your download action here
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                backgroundColor: Colors.transparent, // Transparent background
+                                elevation: 5, // Optional shadow effect
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8), // Rounded corners
+                                ),
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10), // Match the border radius
+                                  border: Border.all(
+                                    color: Colors.white, // Border color
+                                    width: 2.0, // Border thickness
                                   ),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8), // Match the border radius
                                   child: Image.asset(
-                                    'assets/images/google_play_store.png',
+                                    'assets/images/Uptodown.png',
                                     width: 200,
                                     fit: BoxFit.contain,
-                                  )),
-                              const SizedBox(width: 20),
-                              // App Store Button with Development Text
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                      padding: EdgeInsets.only(
-                                          bottom: 5, left: 2, right: 5, top: 5),
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          color: Colors.white),
-                                      child: Image.asset(
-                                        'assets/images/app_store.png',
-                                        width: 200,
-                                        fit: BoxFit.contain,
-                                      )),
-                                  const SizedBox(height: 8),
-                                  const Text(
-                                    "😉 still in development,\nplease wait patiently",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.white),
                                   ),
-                                ],
+                                ),
                               ),
-                            ],
-                          )
-                        ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-
               //Join Us Section
               Container(
                 key: _joinUsKey, // For scrolling to this section
@@ -519,7 +500,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       color: Colors.black.withOpacity(0.5),
                       child: Column(children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         const SelectableText(
@@ -622,7 +603,7 @@ class _MyHomePageState extends State<MyHomePage> {
               // Footer
               Container(
                 width: double.infinity,
-                color: Color(0xFF0C3344),
+                color: const Color(0xFF0C3344),
                 padding: const EdgeInsets.all(10),
                 child: const SelectableText(
                   "Local Tour Company",

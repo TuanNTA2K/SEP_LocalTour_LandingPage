@@ -60,7 +60,7 @@ class _ContactFormState extends State<ContactForm> {
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    icon: const Icon(Icons.email),
+                    icon: const Icon(Icons.email, color: Colors.white,),
                     hintText: "Your email",
                     labelText: "Email",
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
@@ -86,7 +86,7 @@ class _ContactFormState extends State<ContactForm> {
                 child: TextFormField(
                   controller: _subjectController,
                   decoration: InputDecoration(
-                    icon: const Icon(Icons.subject),
+                    icon: const Icon(Icons.subject, color: Colors.white,),
                     hintText: "Subject",
                     labelText: "Subject",
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
@@ -109,7 +109,7 @@ class _ContactFormState extends State<ContactForm> {
                   controller: _messageController,
                   maxLines: 5,
                   decoration: InputDecoration(
-                    icon: const Icon(Icons.message),
+                    icon: const Icon(Icons.message, color: Colors.white,),
                     hintText: "Message",
                     labelText: "Message",
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
@@ -127,8 +127,8 @@ class _ContactFormState extends State<ContactForm> {
               // Send Button
               ElevatedButton.icon(
                 onPressed: _sendEmail,
-                icon: const Icon(Icons.send),
-                label: const Text("Send"),
+                icon: const Icon(Icons.send, color: Colors.orange,),
+                label: const Text("Send", style: TextStyle(color: Colors.red),),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
